@@ -12,6 +12,10 @@ All notable changes to this project will be documented in this file. For info on
 
 - Avoid NoMethodError when accessing Rack::Session::Cookie without requiring delegate first. ([#1610](https://github.com/rack/rack/issues/1610), [@onigra](https://github.com/onigra))
 
+### Removed
+
+- Remove `rack.multithread`/`rack.multiprocess`/`rack.run_once`. These variables generally come too late to be useful. Removed `Rack::Lock` which depends on these variables. ([#1618](https://github.com/rack/rack/pull/1591), [@ioquatix](https://github.com/ioquatix))
+
 ## [2.2.2] - 2020-02-11
 
 ### Fixed

@@ -52,9 +52,6 @@ module Rack
           RACK_VERSION      => Rack::VERSION,
           RACK_INPUT        => rack_input,
           RACK_ERRORS       => request.err,
-          RACK_MULTITHREAD  => false,
-          RACK_MULTIPROCESS => true,
-          RACK_RUNONCE      => false,
           RACK_URL_SCHEME   => ["yes", "on", "1"].include?(env[HTTPS]) ? "https" : "http"
         )
 
